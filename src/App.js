@@ -108,8 +108,8 @@ function HomePage() {
       <img src={invitation_hebrew} alt="Description of image" style={{ width: '30%' }} />  
     </div>
     <form ref={form} noValidate onSubmit={handleSubmit}>
-    <Group title="Please Let Us Know if You Can Make it :) בבקשה תודיעו לנו מי מגיע">
-  <div style={{ width: '100%', margin: '0 auto', justifyContent:'center' }}>
+    <Group title="Please Let Us Know if You Can Make it :) (:אשמח אם תעדכנו אותנו מי מגיע">
+  <div style={{ width: '90%', margin: '0 auto', justifyContent:'center' }}>
     <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: '60px', margin:'0 auto' }}>
       <div>
         <div>Name</div>
