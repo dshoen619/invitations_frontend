@@ -14,7 +14,7 @@ const Field = ({ id, value, label, checked, onChange }) => (
   </div>
 );
 const Group = ({ title, error, children }) => (
-  <div style={{ marginBottom: '20px'}}>
+  <div style={{ marginBottom: '20px', textAlign:'center'}}>
     <h3>{title}</h3>
     {error && <p style={{ color: 'red' }}>{error}</p>}
     {children}
@@ -23,9 +23,10 @@ const Group = ({ title, error, children }) => (
 
 function Submitted() {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100vh', fontSize: '24px' }}>
-      We Got It! Thank You
-    </div>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100vh', fontSize: '24px', flexDirection: 'column' }}>
+      <div>We Got It! Thank You</div>
+      <div style={{marginTop:'5%'}}>קיבלנו, תודה</div>
+  </div>
   );
 }
 
@@ -107,15 +108,20 @@ function HomePage() {
       <img src={invitation_hebrew} alt="Description of image" style={{ width: '30%' }} />  
     </div>
     <form ref={form} noValidate onSubmit={handleSubmit}>
-    <Group title="Please Let Us Know if You Can Make it :)">
-  <div style={{ width: '80%', margin: '0 auto', justifyContent:'center' }}>
+    <Group title="Please Let Us Know if You Can Make it :) בבקשה תודיעו לנו מי מגיע">
+  <div style={{ width: '100%', margin: '0 auto', justifyContent:'center' }}>
     <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: '60px', margin:'0 auto' }}>
-      <div>Name</div>
       <div>
-        <div>Coming</div>
+        <div>Name</div>
+        <div> שֵׁם</div>
       </div>
       <div>
-        <div>Can't Come</div>
+        <div>Coming</div>
+        <div>מגיע</div>
+      </div>
+      <div>
+        <div>Can't Come </div>
+        <div>לא מגיע</div>
       </div>
     </div>
     {data.map((name, index) => (
