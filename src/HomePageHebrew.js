@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useParams, BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { getData, sendData } from './api';
-import { useForm } from "react-cool-form"
 import "./styles.css";
 import invitation_english from './invitation_english.jpg'
 import invitation_hebrew from './invitation_hebrew.jpg'
@@ -28,12 +28,7 @@ export function HomePageHebrew() {
         setComingCount(comingCount);
       }
     }
-    function openComingWindow(){
-      setComing(true)
-      
-    }
     const notComing = async() =>{
-      setComing(false)
       await sendData(0, id)
       navigate('/submitted')
     }
@@ -89,7 +84,7 @@ export function HomePageHebrew() {
             fontFamily: 'Garamond, serif',
             marginTop: '30px'
           }}>
-             {recordData.fields.Name} ל
+             ל{recordData.fields.Name} 
           </div>
           <div style={{
             marginBottom: '0px',
