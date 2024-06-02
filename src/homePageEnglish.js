@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useParams, useNavigate } from 'react-router-dom';
 import { getData, sendData } from './api';
 import "./styles.css";
 import invitation_english from './invitation_english.jpg'
