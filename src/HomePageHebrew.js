@@ -28,7 +28,7 @@ export function HomePageHebrew() {
       }
     }
     const notComing = async() =>{
-      await sendData(0, id)
+      await sendData('Cant Come :(', id)
       navigate('/submitted')
     }
   
