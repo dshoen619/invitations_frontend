@@ -81,9 +81,11 @@ export function HomePageHebrew() {
             fontSize: '25px',
             textAlign: 'center',
             fontFamily: 'Garamond, serif',
-            marginTop: '30px'
+            marginTop: '30px',
+            paddingBottom:'8px'
           }}>
-             ל{recordData.fields.Name} 
+            {recordData.fields.Name} 
+          
           </div>
           <div style={{
             marginBottom: '0px',
@@ -93,7 +95,7 @@ export function HomePageHebrew() {
             width: '100%',
             maxWidth: '100%'
           }}>
-            (:אשמח אם תעדכנו אותנו מי מגיע
+            (:נשמח אם תעדכנו אותנו מי מגיע
           </div>
           <form ref={form} noValidate onSubmit={handleSubmit}>
             <div className="App">
